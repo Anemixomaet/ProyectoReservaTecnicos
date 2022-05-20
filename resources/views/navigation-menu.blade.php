@@ -13,13 +13,16 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Inicio') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('personasvistanombre') }}" :active="request()->routeIs('personasvistanombre')">
                         {{ __('Personas') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('tareas') }}" :active="request()->routeIs('tareas')">
                         {{ __('Tareas') }}
+                    </x-jet-nav-link>
+                   <x-jet-nav-link href="{{ route('programaciones') }}" :active="request()->routeIs('programaciones')">
+                        {{ __('Programaciones') }}
                     </x-jet-nav-link>
                 </div>
             </div>

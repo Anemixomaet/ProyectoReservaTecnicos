@@ -9,6 +9,7 @@ class Personas extends Component
 {
     public $personas;
     public $tipoPersonas = [];
+    
 
     public $persona_id;
     public $nombre;
@@ -123,4 +124,5 @@ class Personas extends Component
     {
         $this->tiposPersonas = array('cliente', 'tecnico');
     }
+    
 }

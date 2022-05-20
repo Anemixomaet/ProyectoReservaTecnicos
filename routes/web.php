@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Personas;
 use App\Http\Livewire\Tareas;
+use App\Http\Livewire\Programaciones;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,4 +29,5 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/personasvista',Personas::class)->name('personasvistanombre');
     Route::get('/tareas',Tareas::class)->name('tareas');
+    Route::get('/programaciones',Programaciones::class)->name('programaciones');
 });
