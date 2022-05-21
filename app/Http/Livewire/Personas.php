@@ -8,7 +8,7 @@ use App\Models\Persona;
 class Personas extends Component
 {
     public $personas;
-    public $tipoPersonas = [];
+    //public $tipoPersonas = [];
     
 
     public $persona_id;
@@ -18,7 +18,8 @@ class Personas extends Component
     public $direccion;
     public $telefono;
     public $email;
-    public $tipo;
+    public $password;
+    public $tipo='tecnico';
     public $titulo;
 
     public $modal = false;
@@ -32,7 +33,7 @@ class Personas extends Component
     public function crear()
     {
         $this->limpiarCampos();
-        $this->tiposPersonas();
+      //  $this->tiposPersonas();
         $this->abrirModal();        
     }
 
@@ -54,7 +55,7 @@ class Personas extends Component
         $this->cedula = '';
         $this->telefono = '';
         $this->email = '';
-        $this->tipo = '';
+        $this->password ='';
         $this->titulo = '';        
     }
 
@@ -68,10 +69,10 @@ class Personas extends Component
         $this->direccion = $persona->direccion;
         $this->telefono = $persona->telefono;
         $this->email = $persona->email;
-        $this->tipo = $persona->tipo;
+        $this->password =$persona->password;
         $this->titulo = $persona->titulo;
 
-        $this->tiposPersonas();
+      //  $this->tiposPersonas();
         $this->abrirModal();
     }
 
@@ -95,7 +96,7 @@ class Personas extends Component
                 'direccion'=> $this->direccion,
                 'telefono'=> $this->telefono,
                 'email'=> $this->email,
-                'tipo' => $this->tipo,
+                'password'=> $this->password,
                 'titulo'=> $this->titulo
             ]);    
         }
@@ -108,7 +109,7 @@ class Personas extends Component
             $persona->direccion = $this->direccion;
             $persona->telefono = $this->telefono;
             $persona->email = $this->email;
-            $persona->tipo = $this->tipo;
+            $persona->password = $this->password;
             $persona->titulo = $this->titulo;
             $persona->save();
         }
@@ -120,9 +121,9 @@ class Personas extends Component
          $this->limpiarCampos();
     }
 
-    public function tiposPersonas()
-    {
-        $this->tiposPersonas = array('cliente', 'tecnico');
-    }
+    // public function tiposPersonas()
+    // {
+    //     $this->tiposPersonas = 'tecnico';
+    // }
     
 }

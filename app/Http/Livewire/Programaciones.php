@@ -69,11 +69,10 @@ class Programaciones extends Component
     public function editar($id)
     {
         $programacion = Programacion::findOrFail($id);
-        
         $this ->programacion_id= $programacion->id;
-        $this ->cliente_id=$programacion->cliente_id;
-        $this ->tarea_id=$programacion->tarea_id;
-        $this ->tecnico_id=$programacion->tecnico_id;
+        $this ->cliente_id=$programacion->id_cliente;
+        $this ->tarea_id=$programacion->id_tarea;
+        $this ->tecnico_id=$programacion->id_tecnico;
         $this ->tiempo_inicio=$programacion->tiempo_inicio;
         $this ->tiempo_fin=$programacion->tiempo_fin;
         $this ->fecha=$programacion->fecha;
@@ -111,7 +110,7 @@ class Programaciones extends Component
         }
         else
         {
-            $programacion = Programacion::find($this->progrmacion_id);
+            $programacion = Programacion::find($this->programacion_id);
             $programacion->id_cliente = $this->cliente_id;
             $programacion->id_tarea = $this->tarea_id;
             $programacion->id_tecnico = $this->tecnico_id;
@@ -119,9 +118,7 @@ class Programaciones extends Component
             $programacion->tiempo_fin = $this->tiempo_fin;
             $programacion->fecha = $this->fecha;
             $programacion->estado = $this->estado;
-            
           
-
             $programacion->save();
         }
         

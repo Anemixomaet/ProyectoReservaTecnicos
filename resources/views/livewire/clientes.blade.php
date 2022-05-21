@@ -1,6 +1,6 @@
 <div>
     <x-slot name="header">
-        <h1 class="text-gray-900">Tecnicos</h1>
+        <h1 class="text-gray-900">Clientes</h1>
     </x-slot>
 
     <div class="py-3">
@@ -26,32 +26,32 @@
         <div class="max-w-7xl mx-auto sm:px6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
                 @if($modal)                
-                    @include('livewire.persona.crear')
+                    @include('livewire.cliente.crear')
                 @endif
                 <table class="table-fixed w-full">
                     <thead>
                         <tr class="bg-gray-50 text-black">
-                            <th class="px-4 py-2">Id</th>
+                            
                             <th class="px-4 py-2">Nombre Completos</th>
                             <th class="px-4 py-2">Email</th>
-                            <th class="px-4 py-2">Contraseña</th>
+                            <th class="px-4 py-2">Direccion</th>
 
                             <th class="px-4 py-2">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($personas as $persona)        
+                        @foreach($clientes as $cliente)        
                             <tr>
-                                <td class="border px-4 py-2">{{$persona->id}}</td>
-                                <td class="border px-4 py-2">{{$persona->nombre}} {{$persona->apellido}}</td>
-                                <td class="border px-4 py-2">{{$persona->email}}</td>
-                                <td class="border px-4 py-2">{{$persona->password}}</td>
+                                
+                                <td class="border px-4 py-2">{{$cliente->nombre}} {{$cliente->apellido}}</td>
+                                <td class="border px-4 py-2">{{$cliente->email}}</td>
+                                <td class="border px-4 py-2">{{$cliente->direccion}}</td>
                                
                                 <td class="border px-4 py-2 text-center">   
-                                    <x-jet-button wire:click="editar({{$persona->id}})" class="font-bold">
+                                    <x-jet-button wire:click="editar({{$cliente->id}})" class="font-bold">
                                         {{ __('Editar') }}
                                     </x-jet-button>
-                                    <x-jet-danger-button wire:click="borrar({{$persona->id}})" class="font-bold">
+                                    <x-jet-danger-button wire:click="borrar({{$cliente->id}})" class="font-bold">
                                         {{ __('Borrar') }}
                                     </x-jet-danger-button>
                                 </td>

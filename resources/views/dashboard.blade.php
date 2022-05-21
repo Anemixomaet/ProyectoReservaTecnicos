@@ -5,9 +5,13 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-    <p style="text-align:center"><img src="/imagen/logo.png" alt="Cover Image" /></p>
+    <div class="py-1">
+    <div class="max-w-screen-2x1 mx-auto sm:px-50 lg:px-1">
+    <div style="border: 1px solid black; position:relative; min-height: 200px">
+     <img src="https://i.pinimg.com/originals/94/15/5c/94155c6d7ba6e47bf7f6f2d73c9fba90.jpg">
         </div>
     </div>
+    
+
+</div>
 </x-app-layout>

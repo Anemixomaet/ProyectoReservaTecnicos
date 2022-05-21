@@ -44,7 +44,7 @@
                                     <x-jet-button wire:click="editar({{$programacion->id}})" class="font-bold">
                                         {{ __('Editar') }}
                                     </x-jet-button>
-                                    <x-jet-danger-button wire:click="programaciones({{$programacion->id}})" class="font-bold">
+                                    <x-jet-danger-button wire:click="borrar({{$programacion->id}})" class="font-bold">
                                         {{ __('Borrar') }}
                                     </x-jet-danger-button>
                                 </td>

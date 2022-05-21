@@ -38,7 +38,7 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div >                        
-                        <p style="text-align:center"><img src="/imagen/logo.png" alt="Cover Image" /></p>
+                        <p style="text-align:center"><img src="/imagen/logoNuevo.jpeg" /></p>
                             
                 </div>
 
