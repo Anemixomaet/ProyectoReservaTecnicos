@@ -15,7 +15,7 @@
                         <label class="inline-block w-32 font-bold">Clientes:</label>
                         <select name="cliente_id" wire:model="cliente_id" 
                             class="w-full leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline">
-                            
+                            <option value="">Seleccione un Cliente </option>
                             @foreach($clientes as $cliente)
                                 <option value="{{ $cliente->id }}">{{ $cliente->nombre }} {{ $cliente->apellido }}</option>
                             @endforeach
@@ -28,7 +28,7 @@
                         <label class="inline-block w-32 font-bold">Tareas:</label>
                         <select name="tarea_id" wire:model="tarea_id" wire:change="calcularTiempoDeFin()" 
                             class="w-full leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline">
-                            <option value="">Seleccione una tarea: </option>
+                            <option value="">Seleccione una Tarea </option>
                             @foreach($tareas as $tarea)
                                 <option value="{{ $tarea->id }}">{{ $tarea->nombre }} </option>
                             @endforeach
@@ -41,7 +41,7 @@
                         <label class="inline-block w-32 font-bold">Tecnicos:</label>
                         <select name="tecnico_id" wire:model="tecnico_id" 
                             class="w-full leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline">
-                            
+                            <option value="">Seleccione un Tecnico </option>
                             @foreach($tecnicos as $tecnico)
                                 <option value="{{ $tecnico->id }}">{{ $tecnico->nombre }} {{ $tecnico->apellido }} </option>
                             @endforeach
@@ -74,7 +74,7 @@
                         <label class="inline-block w-32 font-bold">Estado</label>
                         <select name="estados" wire:model="estado" 
                             class="w-full leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline">
-                            
+                            <option value="">Seleccione un Estado </option>
                             @foreach($estados as $estado)
                                 <option value="{{ $estado }}">{{ $estado }}</option>
                             @endforeach
@@ -89,10 +89,10 @@
                     <label for="tiempo" class="block text-gray-700 text-sm font-bold mb-2">Longitud:</label>
                     <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="longitud" wire:model="longitud">
                 </div> -->
-                <div class="mb-4">
+                <!-- <div class="mb-4">
                     <label for="observaciones" class="block text-gray-700 text-sm font-bold mb-2">Observaciones:</label>
                     <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="observaciones" wire:model="observaciones">
-                </div>
+                </div> -->
                 
             </div>
         </form>

@@ -33,9 +33,23 @@
                         
                     </thead>
                     <tbody>
-                        <!-- @foreach($programaciones as $programacion)        
-                            
-                        @endforeach -->
+                        @foreach($programaciones as $programacion)        
+                        <tr>
+                                
+                                <td class="border px-4 py-2">{{$programacion->cliente->nombre}} {{$programacion->cliente->apellido}} </td>
+                                <td class="border px-4 py-2">{{$programacion->tecnico->nombre}} {{$programacion->tecnico->apellido}}</td>
+                                <td class="border px-4 py-2">{{$programacion->tarea->nombre}}</td>
+                                <td class="border px-4 py-2">{{$programacion->fecha}}</td>
+                                <td class="border px-4 py-2 text-center">   
+                                    <x-jet-button wire:click="editar({{$programacion->id}})" class="font-bold">
+                                        {{ __('Editar') }}
+                                    </x-jet-button>
+                                    <x-jet-danger-button wire:click="programaciones({{$programacion->id}})" class="font-bold">
+                                        {{ __('Borrar') }}
+                                    </x-jet-danger-button>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

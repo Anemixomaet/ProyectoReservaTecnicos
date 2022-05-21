@@ -40,7 +40,7 @@
                     <tbody>
                         @foreach($tareas as $tarea)        
                             <tr>
-                                <td class="border px-4 py-2">{{$tarea->id}}</td>
+                                
                                 <td class="border px-4 py-2">{{$tarea->nombre}} </td>
                                 <td class="border px-4 py-2">{{$tarea->tipo}}</td>
                                 <td class="border px-4 py-2 text-center">   

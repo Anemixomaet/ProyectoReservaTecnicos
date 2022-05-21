@@ -24,9 +24,7 @@ class Programaciones extends Component
     public $tiempo_fin;
     public $fecha;
     public $estado;
-    public $latitud;
-    public $longitug;
-    public $observaciones;
+    
 
     public $modal = false;
 
@@ -64,9 +62,7 @@ class Programaciones extends Component
         $this ->tiempo_fin="";
         $this ->fecha="";
         $this ->estado="";
-        $this ->latitud="";
-        $this ->longitug="";
-        $this ->observaciones="";
+        
   
     }
 
@@ -82,9 +78,7 @@ class Programaciones extends Component
         $this ->tiempo_fin=$programacion->tiempo_fin;
         $this ->fecha=$programacion->fecha;
         $this ->estado=$programacion->estado;
-        $this ->latitud=$programacion->latitud;
-        $this ->longitug=$programacion->longitug;
-        $this ->observaciones=$programacion->observaciones;
+        
         $this->abrirModal();
     }
 
@@ -96,39 +90,36 @@ class Programaciones extends Component
 
     public function guardar()
     {
+        
         $programacion = null;
 
         if(is_null($this->programacion_id))
         {
             Programacion::create(
             [
-                'id_cliente' => $this->id_cliente,
-                'id_tarea' => $this->id_tarea,
-                'id_tecnico' => $this->id_tecnico,
+                'id_cliente' => $this->cliente_id,
+                'id_tarea' => $this->tarea_id,
+                'id_tecnico' => $this->tecnico_id,
                 'tiempo_inicio' => $this->tiempo_inicio,
                 'tiempo_fin' => $this->tiempo_fin,
                 'fecha' => $this->fecha,
                 'estado' => $this->estado,
-                'latitud' => $this->latitud,
-                'longitud' => $this->longitud,
-                'latitud' => $this->nombre,
-                'observaciones' => $this->observaciones,
+                'observaciones' => ''
+                
                   
             ]);    
         }
         else
         {
             $programacion = Programacion::find($this->progrmacion_id);
-            $programacion->id_cliente = $this->id_cliente;
-            $programacion->id_tarea = $this->id_tarea;
-            $programacion->id_tecnico = $this->id_tecnico;
+            $programacion->id_cliente = $this->cliente_id;
+            $programacion->id_tarea = $this->tarea_id;
+            $programacion->id_tecnico = $this->tecnico_id;
             $programacion->tiempo_inicio = $this->tiempo_inicio;
             $programacion->tiempo_fin = $this->tiempo_fin;
             $programacion->fecha = $this->fecha;
             $programacion->estado = $this->estado;
-            $programacion->latitud = $this->latitud;
-            $programacion->longitud = $this->longitud;
-            $programacion->observaciones = $this->observaciones;
+            
           
 
             $programacion->save();
