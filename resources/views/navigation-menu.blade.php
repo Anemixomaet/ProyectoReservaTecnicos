@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <img src="/imagen/logoNuevo.jpeg"  class="block h-9 w-auto" />
                     </a>
                 </div>
 
@@ -29,6 +29,9 @@
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('tecnicocalendario') }}" :active="request()->routeIs('tecnicocalendario')">
                         {{ __('Tecnico calendario') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('vistaNueva') }}" :active="request()->routeIs('vistaNueva')">
+                        {{ __('Vista Nueva') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -108,11 +111,11 @@
                         <x-slot name="content">
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
+                                {{ __('Administrador de Cuentas') }}
                             </div>
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
+                                {{ __('Perfil') }}
                             </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -129,7 +132,7 @@
 
                                 <x-jet-dropdown-link href="{{ route('logout') }}"
                                          @click.prevent="$root.submit();">
-                                    {{ __('Log Out') }}
+                                    {{ __('Salir') }}
                                 </x-jet-dropdown-link>
                             </form>
                         </x-slot>
