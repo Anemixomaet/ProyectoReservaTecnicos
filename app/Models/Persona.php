@@ -9,4 +9,9 @@ class Persona extends Model
 {
     use HasFactory;
     protected $fillable = ['nombre', 'apellido', 'cedula','direccion', 'telefono','email','password', 'tipo', 'titulo'];
+
+    public function programaciones() 
+    {
+        return $this->hasMany(Programacion::class, 'id_tecnico');
+    }
 }

@@ -26,7 +26,7 @@ class Personas extends Component
 
     public function render()
     {
-        $this->personas = Persona::all();
+        $this->personas = Persona::where('tipo','=','tecnico')->get();
         return view('livewire.personas');
     }
       
@@ -97,7 +97,8 @@ class Personas extends Component
                 'telefono'=> $this->telefono,
                 'email'=> $this->email,
                 'password'=> $this->password,
-                'titulo'=> $this->titulo
+                'titulo'=> $this->titulo,
+                'tipo'=>$this->tipo
             ]);    
         }
         else

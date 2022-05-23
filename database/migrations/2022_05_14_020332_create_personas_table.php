@@ -20,7 +20,7 @@ class CreatePersonasTable extends Migration
             $table->string('cedula');
             $table->string('direccion');
             $table->string('telefono');
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->string('email');
             $table->enum('tipo',['cliente', 'tecnico']);
             $table->string('titulo')->nullable();

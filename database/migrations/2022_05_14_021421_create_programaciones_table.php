@@ -24,7 +24,7 @@ class CreateProgramacionesTable extends Migration
             $table->enum('estado', ['asignado', 'ejecutando', 'finalizado']);
             $table->double('latitud')->nullable();
             $table->double('longitud')->nullable();
-            $table->text('observaciones');
+            $table->text('observaciones')->nullable();;
             
             $table->foreign('id_cliente')->references('id')->on('personas');
             $table->foreign('id_tarea')->references('id')->on('tareas');

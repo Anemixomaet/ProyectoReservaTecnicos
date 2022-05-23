@@ -2018,10 +2018,6 @@ select {
     margin-left: 1.5rem;
   }
 
-  .sm\:ml-0 {
-    margin-left: 0px;
-  }
-
   .sm\:block {
     display: block;
   }
@@ -2036,10 +2032,6 @@ select {
 
   .sm\:h-10 {
     height: 2.5rem;
-  }
-
-  .sm\:h-20 {
-    height: 5rem;
   }
 
   .sm\:w-10 {
@@ -2097,10 +2089,6 @@ select {
 
   .sm\:items-center {
     align-items: center;
-  }
-
-  .sm\:justify-start {
-    justify-content: flex-start;
   }
 
   .sm\:justify-center {
@@ -2165,10 +2153,6 @@ select {
   .sm\:text-left {
     text-align: left;
   }
-
-  .sm\:text-right {
-    text-align: right;
-  }
 }
 @media (min-width: 768px) {
 
@@ -2218,5 +2202,19 @@ select {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  .lg\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
 }
 
+#calendar-container{
+  width: 100%;
+}
+#calendar{
+  padding: 10px;
+  margin: 10px;
+  height: 600px;
+  border:2px solid black;
+}

@@ -27,6 +27,9 @@
                    <x-jet-nav-link href="{{ route('programaciones') }}" :active="request()->routeIs('programaciones')">
                         {{ __('Programaciones') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('tecnicocalendario') }}" :active="request()->routeIs('tecnicocalendario')">
+                        {{ __('Tecnico calendario') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 

@@ -31,8 +31,7 @@
                 <table class="table-fixed w-full">
                     <thead>
                         <tr class="bg-gray-50 text-black">
-                            <th class="px-4 py-2">Id</th>
-                            <th class="px-4 py-2">Nombre Completos</th>
+                            <th class="px-4 py-2">Técnico</th>
                             <th class="px-4 py-2">Email</th>
                             <th class="px-4 py-2">Contraseña</th>
 
@@ -42,7 +41,6 @@
                     <tbody>
                         @foreach($personas as $persona)        
                             <tr>
-                                <td class="border px-4 py-2">{{$persona->id}}</td>
                                 <td class="border px-4 py-2">{{$persona->nombre}} {{$persona->apellido}}</td>
                                 <td class="border px-4 py-2">{{$persona->email}}</td>
                                 <td class="border px-4 py-2">{{$persona->password}}</td>

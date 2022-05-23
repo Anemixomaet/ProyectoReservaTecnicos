@@ -31,7 +31,6 @@
                 <table class="table-fixed w-full">
                     <thead>
                         <tr class="bg-gray-50 text-black">
-                            <th class="px-4 py-2">Id</th>
                             <th class="px-4 py-2">Nombre</th>
                             <th class="px-4 py-2">Tipo</th>
                             <th class="px-4 py-2">Acciones</th>
@@ -40,7 +39,6 @@
                     <tbody>
                         @foreach($tareas as $tarea)        
                             <tr>
-                                <td class="border px-4 py-2">{{$tarea->id}}</td>
                                 <td class="border px-4 py-2">{{$tarea->nombre}} </td>
                                 <td class="border px-4 py-2">{{$tarea->tipo}}</td>
                                 
@@ -55,7 +53,7 @@
                             </tr>
                         @endforeach
                     </tbody>
-                </table>
+                </table>                
             </div>
         </div>
     </div>

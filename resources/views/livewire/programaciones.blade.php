@@ -30,12 +30,17 @@
                 @endif
                 <table class="table-fixed w-full">
                     <thead>
-                        
+                        <tr class="bg-gray-50 text-black">
+                            <th class="px-4 py-2">Cliente</th>
+                            <th class="px-4 py-2">Técnico</th>
+                            <th class="px-4 py-2">Tarea</th>
+                            <th class="px-4 py-2">Fecha</th>
+                            <th class="px-4 py-2">Acciones</th>
+                        </tr>
                     </thead>
                     <tbody>
                         @foreach($programaciones as $programacion)        
-                        <tr>
-                                
+                        <tr>                                
                                 <td class="border px-4 py-2">{{$programacion->cliente->nombre}} {{$programacion->cliente->apellido}} </td>
                                 <td class="border px-4 py-2">{{$programacion->tecnico->nombre}} {{$programacion->tecnico->apellido}}</td>
                                 <td class="border px-4 py-2">{{$programacion->tarea->nombre}}</td>

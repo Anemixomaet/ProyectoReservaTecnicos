@@ -23,7 +23,7 @@ class Clientes extends Component
 
     public function render()
     {
-        $this->clientes = Persona::all();
+        $this->clientes = Persona::where('tipo','=','cliente')->get();
         return view('livewire.clientes');
     }
       

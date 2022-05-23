@@ -5,6 +5,7 @@ use App\Http\Livewire\Personas;
 use App\Http\Livewire\Tareas;
 use App\Http\Livewire\Clientes;
 use App\Http\Livewire\Programaciones;
+use App\Http\Livewire\Calendario;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,4 +33,6 @@ Route::middleware([
     Route::get('/clientes',Clientes::class)->name('clientes');
     Route::get('/tareas',Tareas::class)->name('tareas');
     Route::get('/programaciones',Programaciones::class)->name('programaciones');
+    Route::get('/tecnicocalendario',Calendario::class)->name('tecnicocalendario');
+    // Route::get('/tecnicocalendario',function(){return View::make("livewire.tecnico-calendario");})->name('tecnicocalendario');
 });

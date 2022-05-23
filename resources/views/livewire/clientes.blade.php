@@ -30,23 +30,19 @@
                 @endif
                 <table class="table-fixed w-full">
                     <thead>
-                        <tr class="bg-gray-50 text-black">
-                            
-                            <th class="px-4 py-2">Nombre Completos</th>
+                        <tr class="bg-gray-50 text-black">                            
+                            <th class="px-4 py-2">Cliente</th>
                             <th class="px-4 py-2">Email</th>
-                            <th class="px-4 py-2">Direccion</th>
-
+                            <th class="px-4 py-2">Dirección</th>
                             <th class="px-4 py-2">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($clientes as $cliente)        
-                            <tr>
-                                
+                            <tr>                                
                                 <td class="border px-4 py-2">{{$cliente->nombre}} {{$cliente->apellido}}</td>
                                 <td class="border px-4 py-2">{{$cliente->email}}</td>
-                                <td class="border px-4 py-2">{{$cliente->direccion}}</td>
-                               
+                                <td class="border px-4 py-2">{{$cliente->direccion}}</td>                               
                                 <td class="border px-4 py-2 text-center">   
                                     <x-jet-button wire:click="editar({{$cliente->id}})" class="font-bold">
                                         {{ __('Editar') }}
