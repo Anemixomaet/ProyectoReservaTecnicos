@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Persona extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombre', 'apellido', 'cedula','direccion', 'telefono','email','password', 'tipo', 'titulo'];
+    protected $fillable = ['id','nombre', 'apellido', 'cedula','direccion', 'telefono','email','password', 'tipo', 'titulo'];
 
     public function programaciones() 
     {
