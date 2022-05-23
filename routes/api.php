@@ -23,5 +23,6 @@ Route::get('datos/personas', function(){
     return Persona::all();
 });
 
-Route::get('/login', 'App\Http\Controllers\UsuarioController@login');
+Route::post('/login', 'App\Http\Controllers\UsuarioController@login');
+Route::post('/programaciones', 'App\Http\Controllers\UsuarioController@programacionestecnico');
 
