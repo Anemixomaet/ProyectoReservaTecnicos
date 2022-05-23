@@ -26,24 +26,38 @@ class UsuarioController extends Controller
     public function programacionestecnico(Request $request)
     {
         $id = $request->input('id');
-        $programaciones = Programacion::where('id_tecnico', '=', $id)->get();
+        $programaciones = Programacion::where('id_tecnico', '=', $id)->where('estado','=','asignado')->get();
         return response()->json(new ProgramacionCollection($programaciones));
         //return response()->json($programaciones);
     }
 
-    public function update(Request $request, $id)
+    public function iniciarProgramacion(Request $request)
     {
-        $article = Article::findOrFail($id);
-        $article->update($request->all());
+        $latitud = $request->input('latitud');
+        $longitud = $request->input('longitud');
+        $estado = $request->input('estado');
+        $programacionId = $request->input('programacionId');
 
-        return $article;
+        $programacion = Programacion::findOrFail($programacionId);
+        $programacion->latitud = $latitud;
+        $programacion->longitud = $longitud;
+        $programacion->estado = $estado;
+
+        $programacion->save();
+
+        return response()->json( new ProgramacionResource($programacion),203);
     }
 
-    public function delete(Request $request, $id)
+    public function finalizarProgramacion(Request $request)
     {
-        $article = Article::findOrFail($id);
-        $article->delete();
+        $estado = $request->input('estado');
+        $programacionId = $request->input('programacionId');
 
-        return 204;
+        $programacion = Programacion::findOrFail($programacionId);
+        $programacion->estado = $estado;
+
+        $programacion->save();
+
+        return response()->json( new ProgramacionResource($programacion),203);
     }
 }

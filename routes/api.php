@@ -25,4 +25,6 @@ Route::get('datos/personas', function(){
 
 Route::post('/login', 'App\Http\Controllers\UsuarioController@login');
 Route::post('/programaciones', 'App\Http\Controllers\UsuarioController@programacionestecnico');
+Route::post('/iniciarProgramacion', 'App\Http\Controllers\UsuarioController@iniciarProgramacion');
+Route::post('/finalizarProgramacion', 'App\Http\Controllers\UsuarioController@finalizarProgramacion');
 
