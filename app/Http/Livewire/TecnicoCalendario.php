@@ -14,24 +14,7 @@ class TecnicoCalendario extends LivewireCalendar
     // {
     //     return view('livewire.tecnico-calendario');
     // }
-    public function events() : Collection
-    {
-        dd($this->programaciones);
-        return collect([
-            [
-                'id' => 1,
-                'title' => 'Breakfast',
-                'description' => 'Pancakes! 🥞',
-                'date' => Carbon::today(),
-            ],
-            [
-                'id' => 2,
-                'title' => 'Meeting with Pamela',
-                'description' => 'Work stuff',
-                'date' => Carbon::tomorrow(),
-            ],
-        ]);        
-    }
+    
     
     // public function mount($programacionesTecnico)
     // {

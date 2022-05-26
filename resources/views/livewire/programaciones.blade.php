@@ -35,6 +35,7 @@
                             <th class="px-4 py-2">Técnico</th>
                             <th class="px-4 py-2">Tarea</th>
                             <th class="px-4 py-2">Fecha</th>
+                            <th class="px-4 py-2">Estado</th>
                             <th class="px-4 py-2">Acciones</th>
                         </tr>
                     </thead>
@@ -45,6 +46,7 @@
                                 <td class="border px-4 py-2">{{$programacion->tecnico->nombre}} {{$programacion->tecnico->apellido}}</td>
                                 <td class="border px-4 py-2">{{$programacion->tarea->nombre}}</td>
                                 <td class="border px-4 py-2">{{$programacion->fecha}}</td>
+                                <td class="border px-4 py-2">{{$programacion->estado}}</td>
                                 <td class="border px-4 py-2 text-center">   
                                     <x-jet-button wire:click="editar({{$programacion->id}})" class="font-bold">
                                         {{ __('Editar') }}

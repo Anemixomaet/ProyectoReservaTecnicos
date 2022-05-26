@@ -30,9 +30,7 @@
                     <x-jet-nav-link href="{{ route('tecnicocalendario') }}" :active="request()->routeIs('tecnicocalendario')">
                         {{ __('Tecnico calendario') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('vistaNueva') }}" :active="request()->routeIs('vistaNueva')">
-                        {{ __('Vista Nueva') }}
-                    </x-jet-nav-link>
+                   
                 </div>
             </div>
 
