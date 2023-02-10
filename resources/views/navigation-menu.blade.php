@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="/imagen/logoNuevo.jpeg"  class="block h-9 w-auto" />
+                        <img src="/imagen/LOGO.jpg"  class="block h-9 w-auto" />
                     </a>
                 </div>
 
@@ -15,20 +15,18 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Inicio') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('clientes') }}" :active="request()->routeIs('clientes')">
-                        {{ __('Clientes') }}
+                    
+                    <x-jet-nav-link href="{{ route('jugadores') }}" :active="request()->routeIs('jugadores')">
+                        {{ __('Jugadores') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('personasvistanombre') }}" :active="request()->routeIs('personasvistanombre')">
-                        {{ __('Tecnicos') }}
+                    <x-jet-nav-link href="{{ route('categorias') }}" :active="request()->routeIs('categorias')">
+                        {{ __('Categorias') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('tareas') }}" :active="request()->routeIs('tareas')">
-                        {{ __('Tareas') }}
+                    <x-jet-nav-link href="{{ route('asistencias') }}" :active="request()->routeIs('asistencias')">
+                        {{ __('Asistencia') }}
                     </x-jet-nav-link>
-                   <x-jet-nav-link href="{{ route('programaciones') }}" :active="request()->routeIs('programaciones')">
-                        {{ __('Programaciones') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('tecnicocalendario') }}" :active="request()->routeIs('tecnicocalendario')">
-                        {{ __('Tecnico calendario') }}
+                    <x-jet-nav-link href="{{ route('pagos') }}" :active="request()->routeIs('pagos')">
+                        {{ __('Pagos') }}
                     </x-jet-nav-link>
                    
                 </div>

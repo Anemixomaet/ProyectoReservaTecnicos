@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tarea extends Model
+class Categoria extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombre','descripcion', 'tipo', 'tiempo'];
+    protected $table = 'categories';
+    protected $fillable = ['id','nombre', 'detalle'];
 }

@@ -1,6 +1,6 @@
 <div>
     <x-slot name="header">
-        <h1 class="text-gray-900">Programaciones</h1>
+        <h1 class="text-gray-900">Asistencia</h1>
     </x-slot>
 
     <div class="py-3">
@@ -26,32 +26,26 @@
         <div class="max-w-7xl mx-auto sm:px6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
                 @if($modal)                
-                    @include('livewire.programacion.crear')
+                    @include('livewire.asistencia.crear')
                 @endif
                 <table class="table-fixed w-full">
                     <thead>
                         <tr class="bg-gray-50 text-black">
-                            <th class="px-4 py-2">Cliente</th>
-                            <th class="px-4 py-2">Técnico</th>
-                            <th class="px-4 py-2">Tarea</th>
-                            <th class="px-4 py-2">Fecha</th>
-                            <th class="px-4 py-2">Estado</th>
+                            <th class="px-4 py-2">Asistencia</th>
+                            <th class="px-4 py-2">Nombres</th>
                             <th class="px-4 py-2">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($programaciones as $programacion)        
-                        <tr>                                
-                                <td class="border px-4 py-2">{{$programacion->cliente->nombre}} {{$programacion->cliente->apellido}} </td>
-                                <td class="border px-4 py-2">{{$programacion->tecnico->nombre}} {{$programacion->tecnico->apellido}}</td>
-                                <td class="border px-4 py-2">{{$programacion->tarea->nombre}}</td>
-                                <td class="border px-4 py-2">{{$programacion->fecha}}</td>
-                                <td class="border px-4 py-2">{{$programacion->estado}}</td>
+                        @foreach($asistencias as $asistencia)        
+                            <tr>
+                                <td class="border px-4 py-2">{{$asistencia->asistencia}}</td>
+                                <td class="border px-4 py-2">{{$asistencia->personas->nombre}} {{$asistencia->personas->apellido}}</td>                               
                                 <td class="border px-4 py-2 text-center">   
-                                    <x-jet-button wire:click="editar({{$programacion->id}})" class="font-bold">
+                                    <x-jet-button wire:click="editar({{$asistencia->id}})" class="font-bold">
                                         {{ __('Editar') }}
                                     </x-jet-button>
-                                    <x-jet-danger-button wire:click="borrar({{$programacion->id}})" class="font-bold">
+                                    <x-jet-danger-button wire:click="borrar({{$asistencia->id}})" class="font-bold">
                                         {{ __('Borrar') }}
                                     </x-jet-danger-button>
                                 </td>

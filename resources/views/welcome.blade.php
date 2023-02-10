@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>AKROS</title>
+        <title>BORDADORA</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,7 +20,8 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body class="antialiased" >
+        <header class="p-5 border-b bg-black">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -29,63 +30,20 @@
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Ingresar</a>
 
-                        <!-- @if (Route::has('register'))
+                         {{-- @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif -->
+                        @endif  --}}
                     @endauth
                 </div>
             @endif
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div >                        
-                        <p style="text-align:center"><img src="/imagen/logoNuevo.jpeg" /></p>
+            <div class="max-w-6xl mx-auto sm:px-4 lg:px-2">
+                <div class="md:w-3/12 P-5">                        
+                        <p style="text-align:center"><img src="/imagen/bordadora.png" /></p>
                             
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://akroscorp.com/" class="underline text-gray-900 dark:text-white">Akros </a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                La volatilidad del entorno digital ha generado nuevos desafíos y modelos de negocio, donde el cliente es el punto focal de las decisiones. Hemos fortalecido nuestro enfoque y estrategia con el propósito de ayudar a crecer el negocio de nuestros clientes, agregando valor a través de la innovación y la excelencia operacional.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://akroscorp.com/nuestros-partners/" class="underline text-gray-900 dark:text-white">Misión</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Contamos con una fantastica RED de partners. Nuestra misión como empresa, siempre será poder aportar en el futuro de nuestro país, y eso empieza desde casa, con los más pequeños y en esta ocasión pudimos ser parte del sueño de muchos estudiantes, esperamos seguir siendo parte de estas actividades.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://akroscorp.com/contactanos/" class="ml-1 underline">
-                                Contactenos
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+    </header>
     </body>
 </html>
